@@ -4,7 +4,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 const index = require('./index-2648c039.js');
 
-const cameraPreviewCss = ":host{display:block}video{width:100%;height:200px;border-radius:8px}img{width:100%;border-radius:8px}";
+const cameraPreviewCss = ":host{display:block}video{width:100%;border-radius:8px}img{width:100%;border-radius:8px}";
 
 const CameraPreview = class {
   constructor(hostRef) {

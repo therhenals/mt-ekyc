@@ -1,6 +1,6 @@
 import { r as registerInstance, c as createEvent, h } from './index-f3f9573a.js';
 
-const cameraPreviewCss = ":host{display:block}video{width:100%;height:200px;border-radius:8px}img{width:100%;border-radius:8px}";
+const cameraPreviewCss = ":host{display:block}video{width:100%;border-radius:8px}img{width:100%;border-radius:8px}";
 
 const CameraPreview = class {
   constructor(hostRef) {

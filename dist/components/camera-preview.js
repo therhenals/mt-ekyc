@@ -1,6 +1,6 @@
 import { proxyCustomElement, HTMLElement, createEvent, h } from '@stencil/core/internal/client';
 
-const cameraPreviewCss = ":host{display:block}video{width:100%;height:200px;border-radius:8px}img{width:100%;border-radius:8px}";
+const cameraPreviewCss = ":host{display:block}video{width:100%;border-radius:8px}img{width:100%;border-radius:8px}";
 
 const CameraPreview$1 = /*@__PURE__*/ proxyCustomElement(class CameraPreview extends HTMLElement {
   constructor() {
