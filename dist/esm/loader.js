@@ -1,5 +1,5 @@
-import { b as bootstrapLazy } from './index-f3f9573a.js';
-export { s as setNonce } from './index-f3f9573a.js';
+import { b as bootstrapLazy } from './index-708bf438.js';
+export { s as setNonce } from './index-708bf438.js';
 
 const defineCustomElements = (win, options) => {
   if (typeof window === 'undefined') return undefined;

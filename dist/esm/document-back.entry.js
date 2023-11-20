@@ -1,4 +1,4 @@
-import { r as registerInstance, h, H as Host } from './index-f3f9573a.js';
+import { r as registerInstance, h, H as Host } from './index-708bf438.js';
 
 const documentBackCss = ":host{display:block}";
 

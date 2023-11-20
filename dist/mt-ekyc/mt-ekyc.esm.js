@@ -1,2 +1,2 @@
-import{p as c,b as e}from"./p-50c2c255.js";export{s as setNonce}from"./p-50c2c255.js";const o=()=>{const e=import.meta.url;const o={};if(e!==""){o.resourcesUrl=new URL(".",e).href}return c(o)};o().then((c=>e([["p-53b8de8d",[[1,"camera-preview"]]],["p-58d6d054",[[1,"document-back"]]],["p-8082dce0",[[1,"document-front"]]]],c)));
+import{p as e,b as a}from"./p-a0ba24ee.js";export{s as setNonce}from"./p-a0ba24ee.js";const o=()=>{const a=import.meta.url;const o={};if(a!==""){o.resourcesUrl=new URL(".",a).href}return e(o)};o().then((e=>a([["p-c1a920d8",[[1,"camera-preview"]]],["p-0abc9a60",[[1,"document-back"]]],["p-2f57ea52",[[1,"document-front"]]]],e)));
 //# sourceMappingURL=mt-ekyc.esm.js.map

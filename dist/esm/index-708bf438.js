@@ -104,6 +104,20 @@ const h = (nodeName, vnodeData, ...children) => {
         }
     };
     walk(children);
+    if (vnodeData) {
+        // normalize class / className attributes
+        {
+            const classData = vnodeData.className || vnodeData.class;
+            if (classData) {
+                vnodeData.class =
+                    typeof classData !== 'object'
+                        ? classData
+                        : Object.keys(classData)
+                            .filter((k) => classData[k])
+                            .join(' ');
+            }
+        }
+    }
     const vnode = newVNode(nodeName, null);
     vnode.$attrs$ = vnodeData;
     if (vNodeChildren.length > 0) {
@@ -271,7 +285,14 @@ const setAccessor = (elm, memberName, oldValue, newValue, isSvg, flags) => {
     if (oldValue !== newValue) {
         let isProp = isMemberInElement(elm, memberName);
         let ln = memberName.toLowerCase();
-        if (memberName === 'ref') {
+        if (memberName === 'class') {
+            const classList = elm.classList;
+            const oldClasses = parseClassList(oldValue);
+            const newClasses = parseClassList(newValue);
+            classList.remove(...oldClasses.filter((c) => c && !newClasses.includes(c)));
+            classList.add(...newClasses.filter((c) => c && !oldClasses.includes(c)));
+        }
+        else if (memberName === 'ref') {
             // minifier will clean this up
             if (newValue) {
                 newValue(elm);
@@ -327,6 +348,8 @@ const setAccessor = (elm, memberName, oldValue, newValue, isSvg, flags) => {
         else ;
     }
 };
+const parseClassListRegex = /\s/;
+const parseClassList = (value) => (!value ? [] : value.split(parseClassListRegex));
 const CAPTURE_EVENT_SUFFIX = 'Capture';
 const CAPTURE_EVENT_REGEX = new RegExp(CAPTURE_EVENT_SUFFIX + '$');
 const updateElement = (oldVnode, newVnode, isSvgMode, memberName) => {
@@ -1141,4 +1164,4 @@ const writeTask = /*@__PURE__*/ queueTask(queueDomWrites, true);
 
 export { Host as H, bootstrapLazy as b, createEvent as c, h, promiseResolve as p, registerInstance as r, setNonce as s };
 
-//# sourceMappingURL=index-f3f9573a.js.map
+//# sourceMappingURL=index-708bf438.js.map
