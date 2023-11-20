@@ -1,0 +1,2 @@
+import{r as s,h as o,H as t}from"./p-50c2c255.js";const r=":host{display:block}";const c=class{constructor(o){s(this,o)}render(){return o(t,null,o("slot",null))}};c.style=r;export{c as document_front};
+//# sourceMappingURL=p-8082dce0.entry.js.map

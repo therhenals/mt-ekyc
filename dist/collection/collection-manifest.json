@@ -1,0 +1,14 @@
+{
+  "entries": [
+    "components/camera-preview/camera-preview.js",
+    "components/document-back/document-back.js",
+    "components/document-front/document-front.js"
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "4.7.2",
+    "typescriptVersion": "5.2.2"
+  },
+  "collections": [],
+  "bundles": []
+}
